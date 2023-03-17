@@ -1,45 +1,37 @@
 import React from "react";
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
-function Nav (props) {
+function Nav () {
 
-	// const pages = [
-	// 	{
-	// 		name: 'ABOUT',
-	// 		link: '/about'
-	// 	},
-	// 	{
-	// 		name: 'SKILLS',
-	// 		link: '/skills'
-	// 	},
-	// 	{
-	// 		name: 'PROJECTS',
-	// 		link: '/projects'
-	// 	},
-	// 	{
-	// 		name: 'CONTACT',
-	// 		link: '/contact'
-	// 	}
-	// ];
+	const pages = [
+		{
+			name: 'ABOUT',
+			link: '/about'
+		},
+		{
+			name: 'SKILLS',
+			link: '/skills'
+		},
+		{
+			name: 'PROJECTS',
+			link: '/projects'
+		},
+		{
+			name: 'CONTACT',
+			link: '/contact'
+		}
+	];
 
 	return (
 		<nav>
 			<ul>
-				<li class="about-container center">
-					<h2>ABOUT</h2>
-				</li>
-		
-				<li class="skills-container center">
-					<h2>SKILLS</h2>
-				</li>
-		
-				<li class="projects-container center">
-					<h2>PROJECTS</h2>
-				</li>
-		
-				<li class="contact-container center">
-					<h2>CONTACT</h2>
-				</li>
+				{pages.map(page => (
+					<NavLink to={page.link} end={true} key={page.name} className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+						<li className="center" id={page.name}>
+							<h2>{page.name}</h2>
+						</li>
+					</NavLink>
+				))}
 			</ul>
 		</nav>
 	);

@@ -58,25 +58,25 @@ nav ul li:hover {
 	opacity: 100%;
 }
 
-.about-container {
+#ABOUT {
 	z-index: 3;
 	height: 55vh;
 	width: 55vw;
 }
 
-.skills-container {
+#SKILLS {
 	z-index: 2;
 	height: 70vh;
 	width: 70vw;
 }
 
-.projects-container {
+#PROJECTS {
 	z-index: 1;
 	height: 85vh;
 	width: 85vw;
 }
 
-.contact-container {
+#CONTACT {
 	height: 100vh;
 	width: 100vw;
 }
@@ -85,6 +85,7 @@ nav ul li h2 {
 	display: flex;
 	align-items: center;
 	height: 7.5vh;
+	text-decoration: none;
 }
 
 .center{
