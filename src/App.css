@@ -38,13 +38,13 @@ header {
 	margin-top: 12.5px;
 }
 
-header section a i {
+/* header section a i {
 	transition: 500ms ease-in-out;
 }
 
 header section a i:hover {
 	color: #0ea5e9;
-}
+} */
 
 nav ul li {
 	display: flex;
