@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Header () {
 	return (
@@ -11,13 +14,16 @@ function Header () {
 			{/* <!-- icons --> */}
 			<section class="icons-container">
 				<a href="https://github.com/dsapione" target="_blank" rel="noreferrer">
-					<i class="fa-brands fa-square-github fa-3x"></i>
+					<FontAwesomeIcon icon={faSquareGithub} size='3x' />
+					{/* <i class="fa-brands fa-square-github fa-3x"></i> */}
 				</a>
 				<a href="mailto:dsapion@gmail.com">
-					<i class="fa-solid fa-envelope fa-3x"></i>
+					<FontAwesomeIcon icon={faEnvelope} size='3x' />
+					{/* <i class="fa-solid fa-envelope fa-3x"></i> */}
 				</a>
 				<a href="https://www.linkedin.com/in/daniel-sapione/" target="_blank" rel="noreferrer">
-					<i class="fa-brands fa-linkedin fa-3x"></i>
+					<FontAwesomeIcon icon={faLinkedin} size='3x' />
+					{/* <i class="fa-brands fa-linkedin fa-3x"></i> */}
 				</a>
 			</section>
 		</header>
