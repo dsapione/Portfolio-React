@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #201e1e;
+	color: white;
+	font-family: 'Saira Condensed', sans-serif;
+	font-weight: lighter;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 4;
+	height: 40vh;
+	width: 40vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: bold;
+	font-size: 6rem;
+	margin-bottom: -20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.accent-line {
+	border-bottom: 6px #0ea5e9 solid;
+	border-radius: 3px;
+	width: 65%;
+	margin-top: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.icons-container {
+	display: flex;
+	justify-content: space-evenly;
+	width: 75%;
+	margin-top: 12.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header section a i {
+	transition: 500ms ease-in-out;
+}
+
+header section a i:hover {
+	color: #0ea5e9;
+}
+
+nav ul li {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	opacity: 0;
+	transition: 500ms ease-in-out;
+}
+
+nav ul li:hover {
+	opacity: 100%;
+}
+
+.about-container {
+	z-index: 3;
+	height: 55vh;
+	width: 55vw;
+}
+
+.skills-container {
+	z-index: 2;
+	height: 70vh;
+	width: 70vw;
+}
+
+.projects-container {
+	z-index: 1;
+	height: 85vh;
+	width: 85vw;
+}
+
+.contact-container {
+	height: 100vh;
+	width: 100vw;
+}
+
+nav ul li h2 {
+	display: flex;
+	align-items: center;
+	height: 7.5vh;
+}
+
+.center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border: 2px #0ea5e9 solid;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./assets/font/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Saira Condensed';
+  src: url('./assets/font/SairaCondensed-Light.ttf');
 }
