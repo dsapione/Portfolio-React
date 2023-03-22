@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Nav () {
+function HomeNav () {
 
 	const pages = [
 		{
@@ -37,4 +37,4 @@ function Nav () {
 	);
 };
 
-export default Nav;
+export default HomeNav;

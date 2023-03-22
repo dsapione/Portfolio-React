@@ -2,7 +2,7 @@ import './App.css';
 import { React } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
-import Nav from './components/nav';
+import HomeNav from './components/homenav';
 import About from './components/about';
 import Skills from './components/skills';
 import Projects from './components/projects';
@@ -12,9 +12,8 @@ function App() {
 
   return (
 		<BrowserRouter>
-			<Home/>
-			<Nav/>
 			<Routes>
+				<Route path='/' element={<><Home/><HomeNav/></>}/>
 				<Route path='/about' element={<About/>}/>
 				<Route path='/skills' element={<Skills/>}/>
 				<Route path='/projects' element={<Projects/>}/>

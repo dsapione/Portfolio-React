@@ -50,11 +50,12 @@ nav ul li {
 	display: flex;
 	justify-content: center;
 	list-style: none;
-	opacity: 0;
+	opacity: 25%;
 	transition: 500ms ease-in-out;
 }
 
 nav ul li:hover {
+	background-color: #686565;
 	opacity: 100%;
 }
 
@@ -86,6 +87,7 @@ nav ul li h2 {
 	align-items: center;
 	height: 7.5vh;
 	text-decoration: none;
+	background: transparent;
 }
 
 .center{
