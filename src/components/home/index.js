@@ -6,7 +6,7 @@ import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 function Header () {
 	return (
 		// <!-- header containg name and icons -->
-		<header class="center">
+		<header class="homeHeader center">
 			<h1 class="name">DANIEL SAPIONE</h1>
 			<h3>FRONT END DEVELOPER | PORTFOLIO</h3>
 			{/* <!-- line span between name and icons --> */}

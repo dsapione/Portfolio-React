@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function HomeNav () {
-
+function Nav () {
 	const pages = [
+		{
+			name: 'HOME',
+			link: '/'
+		},
 		{
 			name: 'ABOUT',
 			link: '/about'
@@ -22,19 +25,22 @@ function HomeNav () {
 		}
 	];
 
+	const [open, setOpen] = useState(false);
+
 	return (
-		<nav>
+		<nav className="nav">
+			<button className="menuBtn" onClick={() => setOpen(!open)}>MENU</button>
 			<ul>
 				{pages.map(page => (
 					<NavLink to={page.link} end={true} key={page.name} className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-						<li className="center homeNavLi" id={page.name}>
-							<h2>{page.name}</h2>
-						</li>
+						{ open && <li> 
+												<h2>{page.name}</h2>
+											</li>}
 					</NavLink>
 				))}
-			</ul>
+			</ul>			
 		</nav>
 	);
 };
 
-export default HomeNav;
+export default Nav;

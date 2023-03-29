@@ -7,11 +7,24 @@
 	font-weight: lighter;
 }
 
-header {
+.hide {
+	display: none;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* home page */
+.homeHeader {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	border-radius: 20px;
 	z-index: 4;
 	height: 40vh;
 	width: 40vw;
@@ -46,17 +59,30 @@ header section a i:hover {
 	color: #0ea5e9;
 } */
 
-nav ul li {
+/* home page nav */
+.homeNavLi {
 	display: flex;
 	justify-content: center;
 	list-style: none;
 	opacity: 25%;
 	transition: 500ms ease-in-out;
+	border-radius: 20px;
 }
 
-nav ul li:hover {
+.homeNavLi:hover {
 	background-color: #686565;
 	opacity: 100%;
+}
+
+.homeNavLi h2 {
+	display: flex;
+	align-items: center;
+	height: 7.5vh;
+	font-size: 42px;
+	font-weight: 900;
+	color: #201e1e;
+	text-decoration: none;
+	background: transparent;
 }
 
 #ABOUT {
@@ -82,21 +108,63 @@ nav ul li:hover {
 	width: 100vw;
 }
 
-nav ul li h2 {
+/* pages and mobile nav */
+.nav {
 	display: flex;
 	align-items: center;
-	height: 7.5vh;
-	text-decoration: none;
-	background: transparent;
+	flex-direction: column;
 }
 
-.center{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	box-sizing: border-box;
-	border: 2px #0ea5e9 solid;
+.menuBtn {
+	font-size: 42px;
+	font-weight: 900;
+	margin-top: 20px;
+	border: none;
+	color: #686565;
+	opacity: 50%;
+	transition: 500ms ease-in-out;
+}
+
+.menuBtn:hover {
+	color: #686565;
+	opacity: 100%;
+	transform: translateY(-5px)
+}
+
+.nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 75vh;
+}
+
+.nav ul a {
+	text-decoration: none;
+	list-style: none;
+	margin: 15px;
+	opacity: 75%;
+}
+
+/* about page */
+.about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	width: 60vw;
+}
+
+.about img {
+	border-radius: 1000px;
+	margin-right: 20px;
+	width: 25%;
+}
+
+.about p {
+	font-size: 20px;
+	width: 75%;
+	text-align: justify;
 }
 
 @font-face {
