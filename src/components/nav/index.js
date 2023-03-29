@@ -30,15 +30,19 @@ function Nav () {
 	return (
 		<nav className="nav">
 			<button className="menuBtn" onClick={() => setOpen(!open)}>MENU</button>
-			<ul>
-				{pages.map(page => (
-					<NavLink to={page.link} end={true} key={page.name} className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-						{ open && <li> 
-												<h2>{page.name}</h2>
-											</li>}
-					</NavLink>
-				))}
-			</ul>			
+			{open && 
+				<ul>
+					{pages.map(page => (
+						<li>
+							<NavLink to={page.link} end={true} key={page.name} className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+								<h2>
+									{page.name}
+								</h2>
+							</NavLink>
+						</li>
+					))}
+				</ul>
+			}			
 		</nav>
 	);
 };

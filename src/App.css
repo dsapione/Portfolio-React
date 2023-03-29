@@ -51,13 +51,13 @@
 	margin-top: 12.5px;
 }
 
-/* header section a i {
+header section a svg path {
 	transition: 500ms ease-in-out;
 }
 
-header section a i:hover {
-	color: #0ea5e9;
-} */
+header section a svg path:hover {
+	fill: #0ea5e9;
+}
 
 /* home page nav */
 .homeNavLi {
@@ -137,13 +137,34 @@ header section a i:hover {
 	justify-content: center;
 	flex-direction: column;
 	height: 75vh;
+	z-index: 1;
+	background: transparent;
+  background-color: rgb(32, 30, 30, .85);
+  width: 100%;
 }
 
-.nav ul a {
-	text-decoration: none;
+.nav ul li {
 	list-style: none;
 	margin: 15px;
+}
+
+.nav ul li a {
+	text-decoration: none;
 	opacity: 75%;
+}
+
+.nav ul li a:hover {
+	opacity: 100%;
+	font-weight: 900;
+}
+
+.nav ul li a.active {
+	font-weight: 900;
+	opacity: 100%;
+}
+
+.nav ul li a.active h2 {
+	color: #0ea5e9;
 }
 
 /* about page */

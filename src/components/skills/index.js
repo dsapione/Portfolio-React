@@ -1,9 +1,9 @@
-// import React from 'react';
+import React from 'react';
 
-// function Skills () {
-// 	return (
+function Skills () {
+	return (
+		<div></div>
+	);
+};
 
-// 	);
-// };
-
-// export default Skills;
+export default Skills;
